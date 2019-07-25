@@ -19,4 +19,4 @@ spec:
               - name: MYSQL_SERVER_HOST
                 value: 'mysql' # 对应mysql-rc.yaml定义的mysql资源对象，用对方的地址连接
               - name: MYSQL_SERVER_PORT
-                value: '3306
+                value: '3306'
