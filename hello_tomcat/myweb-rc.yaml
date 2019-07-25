@@ -9,14 +9,14 @@ spec:
     metadata:
       labels:
         app: myweb  # Pod副本拥有的标签，必须严格对应上面RC的selector
-      sepc:
-        containers:
-          - name: myweb
-            image: kubeguide/tomcat-app:v1
-            ports:
-              - containerPort: 8080
-            env:
-              - name: MYSQL_SERVER_HOST
-                value: 'mysql' # 对应mysql-rc.yaml定义的mysql资源对象，用对方的地址连接
-              - name: MYSQL_SERVER_PORT
-                value: '3306'
+    sepc:
+      containers:
+        - name: myweb # 容器名称
+          image: kubeguide/tomcat-app:v1  # 容器对应的docker image
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MYSQL_SERVER_HOST
+              value: 'mysql' # 对应mysql-rc.yaml定义的mysql资源对象，用对方的地址连接
+            - name: MYSQL_SERVER_PORT
+              value: '3306'
